@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Pizzaria Mordomia - Desde 2001</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+<body>
+
+  <!-- NAVBAR -->
+  <header class="navbar">
+    <div class="nav-container">
+      <a href="#" class="brand-logo">
+        <div class="logo-badge">
+          <span class="logo-title">MORDOMIA</span>
+          <span class="logo-sub">DELIVERY • DESDE 2001</span>
+        </div>
+      </a>
+
+      <nav class="nav-links">
+        <a href="#cardapio">Cardápio</a>
+        <a href="#promocoes">Promoções</a>
+        <a href="#sobre">Nossa História</a>
+        <a href="#depoimentos">Avaliações</a>
+        <a href="#contato">Contato</a>
+      </nav>
+
+      <div class="nav-actions">
+        <a href="tel:5511999999999" class="phone-link">
+          <i data-lucide="phone"></i>
+          <span>(11) 99999-9999</span>
+        </a>
+        <button class="cart-btn" id="openCartBtn">
+          <i data-lucide="shopping-bag"></i>
+          <span class="cart-badge" id="cartBadge">0</span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- HERO SECTION COM FUNDO DE PIZZA HD -->
+  <section class="hero">
+    <div class="hero-overlay"></div>
+    <div class="hero-content">
+      <span class="hero-tag"><i data-lucide="sparkles"></i> A verdadeira experiência da pizza em casa</span>
+      <h1>A mordomia de saborear a melhor pizza da cidade.</h1>
+      <p>Massa artesanal com fermentação natural de 48h, ingredientes selecionados e entrega super rápida. Desde 2001 levando sabor e tradição para sua mesa.</p>
+      <div class="hero-buttons">
+        <a href="#cardapio" class="btn btn-primary"><i data-lucide="pizza"></i> Ver Cardápio</a>
+        <a href="#promocoes" class="btn btn-outline-hero"><i data-lucide="tag"></i> Ver Promoções</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- FEATURES -->
+  <section class="features">
+    <div class="features-grid">
+      <div class="feature-card">
+        <div class="feature-icon"><i data-lucide="clock"></i></div>
+        <h3>Entrega Rápida</h3>
+        <p>Sua pizza quentinha na sua porta em até 40 minutos.</p>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon"><i data-lucide="flame"></i></div>
+        <h3>Massa Artesanal</h3>
+        <p>Fermentação natural de 48h, leve e crocante.</p>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon"><i data-lucide="award"></i></div>
+        <h3>Ingredientes Premium</h3>
+        <p>Queijos selecionados, molho de tomate italiano e produtos frescos.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- CARDÁPIO -->
+  <section class="menu-section" id="cardapio">
+    <div class="section-title">
+      <h2>Nosso Cardápio</h2>
+      <p>Escolha a sua favorita e sinta o sabor inconfundível da Mordomia</p>
+    </div>
+
+    <!-- Filtros -->
+    <div class="menu-filters">
+      <button class="filter-btn active" data-category="todas">Todas</button>
+      <button class="filter-btn" data-category="tradicionais">Tradicionais</button>
+      <button class="filter-btn" data-category="especiais">Especiais</button>
+      <button class="filter-btn" data-category="doces">Doces</button>
+      <button class="filter-btn" data-category="bebidas">Bebidas</button>
+    </div>
+
+    <!-- Lista de Produtos -->
+    <div class="menu-grid" id="menuGrid">
+      <!-- Inserido dinamicamente via JS -->
+    </div>
+  </section>
+
+  <!-- SOBRE NÓS -->
+  <section class="about-section" id="sobre">
+    <div class="about-container">
+      <div class="about-text">
+        <span class="sub-heading">Desde 2001</span>
+        <h2>Tradição, Qualidade e Mordomia em Cada Pedaço</h2>
+        <p>Há mais de duas décadas, a Pizzaria Mordomia nasceu com uma missão simples: oferecer o melhor atendimento e a pizza mais deliciosa com a comodidade que você merece.</p>
+        <p>Nossos mestres pizzaiolos preparam diariamente massas com fermentação natural e ingredientes rigorosamente selecionados para garantir uma massa leve, bordas recheadas e recheio generoso.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- RODAPÉ PROFISSIONAL (FOOTER) -->
+  <footer id="contato">
+    <div class="footer-top">
+      <div class="footer-container">
+        <!-- Coluna 1: Marca & Apresentação -->
+        <div class="footer-col brand-col">
+          <div class="logo-badge light">
+            <span class="logo-title">MORDOMIA</span>
+            <span class="logo-sub">DELIVERY • DESDE 2001</span>
+          </div>
+          <p>A verdadeira pizza artesanal entregue no conforto da sua casa. Sabor, qualidade e tradição desde 2001.</p>
+          <div class="social-links">
+            <a href="#" aria-label="Instagram"><i data-lucide="instagram"></i></a>
+            <a href="#" aria-label="Facebook"><i data-lucide="facebook"></i></a>
+            <a href="#" aria-label="WhatsApp"><i data-lucide="message-circle"></i></a>
+          </div>
+        </div>
+
+        <!-- Coluna 2: Horário e Status de Abertura -->
+        <div class="footer-col">
+          <h4>Horário de Atendimento</h4>
+          <div class="status-badge open">
+            <span class="pulse-dot"></span>
+            <span id="storeStatus">Aberto Agora</span>
+          </div>
+          <ul class="hours-list">
+            <li><span>Terça a Quinta:</span> <strong>18:00 - 23:30</strong></li>
+            <li><span>Sexta e Sábado:</span> <strong>18:00 - 00:00</strong></li>
+            <li><span>Domingo:</span> <strong>18:00 - 23:30</strong></li>
+            <li class="closed"><span>Segunda-feira:</span> <strong>Fechado</strong></li>
+          </ul>
+        </div>
+
+        <!-- Coluna 3: Links Rápidos -->
+        <div class="footer-col">
+          <h4>Navegação</h4>
+          <ul class="footer-links">
+            <li><a href="#cardapio"><i data-lucide="chevron-right"></i> Cardápio Completo</a></li>
+            <li><a href="#promocoes"><i data-lucide="chevron-right"></i> Combos e Promoções</a></li>
+            <li><a href="#sobre"><i data-lucide="chevron-right"></i> Nossa História</a></li>
+            <li><a href="#depoimentos"><i data-lucide="chevron-right"></i> Avaliações dos Clientes</a></li>
+          </ul>
+        </div>
+
+        <!-- Coluna 4: Contato & Cobertura -->
+        <div class="footer-col">
+          <h4>Central de Delivery</h4>
+          <div class="contact-info">
+            <p><i data-lucide="phone-call"></i> <strong>(11) 99999-9999</strong></p>
+            <p><i data-lucide="map-pin"></i> Rua das Pizzas, 123 - Centro</p>
+            <p><i data-lucide="truck"></i> Raio de entrega: até 8km</p>
+          </div>
+          <div class="payment-methods">
+            <span class="payment-title">Formas de Pagamento</span>
+            <div class="payment-icons">
+              <span class="pay-badge">PIX</span>
+              <span class="pay-badge">Crédito</span>
+              <span class="pay-badge">Débito</span>
+              <span class="pay-badge">VR / VA</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Rodapé Inferior -->
+    <div class="footer-bottom">
+      <div class="footer-bottom-container">
+        <p>&copy; 2026 Pizzaria Mordomia. Todos os direitos reservados.</p>
+        <p class="tagline">Feito com massa de fermentação natural ❤️</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- CARRINHO MODAL (DRAWER) -->
+  <div class="cart-drawer" id="cartDrawer">
+    <div class="cart-overlay" id="cartOverlay"></div>
+    <div class="cart-content">
+      <div class="cart-header">
+        <h3><i data-lucide="shopping-bag"></i> Seu Pedido</h3>
+        <button class="close-btn" id="closeCartBtn">&times;</button>
+      </div>
+
+      <div class="cart-items" id="cartItems">
+        <!-- Itens no carrinho -->
+      </div>
+
+      <div class="cart-footer">
+        <div class="cart-summary">
+          <div class="summary-row">
+            <span>Subtotal:</span>
+            <span id="subtotalPrice">R$ 0,00</span>
+          </div>
+          <div class="summary-row">
+            <span>Taxa de Entrega:</span>
+            <span>R$ 5,00</span>
+          </div>
+          <div class="summary-row total">
+            <span>Total:</span>
+            <span id="totalPrice">R$ 5,00</span>
+          </div>
+        </div>
+
+        <div class="checkout-inputs">
+          <input type="text" id="custName" placeholder="Seu Nome *" required />
+          <input type="text" id="custAddress" placeholder="Endereço de Entrega Completo *" required />
+          <select id="payMethod">
+            <option value="Cartão de Crédito/Débito">Cartão na Entrega</option>
+            <option value="Pix">Pix (Online / Chave)</option>
+            <option value="Dinheiro">Dinheiro (Troco)</option>
+          </select>
+        </div>
+
+        <button class="btn btn-primary checkout-btn" id="checkoutBtn">
+          <i data-lucide="send"></i> Enviar Pedido no WhatsApp
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
